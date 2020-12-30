@@ -1,0 +1,49 @@
+#李号个人配置文档
+#注意：与property比yaml路径不用转义
+tp:
+  fileDir: E:\springboot_vue\src\main\resources\static\photo #上传文件存放的地方
+  jwtExpired: 2  #单位：分钟 7*24*60=10080分钟
+  devMode: true #是否开发模式
+server:
+  #中间必须由空格
+  port: 8080
+  #server.servlet.context-path报错未解决Failed to bind properties under 'server.servlet.context-parameters' to java.util.Map<java.lang.String, java.lang.String>:
+ # servlet:
+  #  context-parameters: /ems_vue
+  servlet:
+    context-path: /ems_vue
+
+
+
+#spring配置
+spring:
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/emp?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  #配置允许外部资源访问 spring.web.resources.static-locations=classpath:/static/,file:${photo.dir}
+  #配置静态资源路径
+
+  application:
+    name: ems
+
+  web:
+    resources:
+      static-locations: classpath:/static/,file:${tp.fileDir}
+logging:
+  level:
+    com.li.dao: debug
+    com.li.service: info
+    com.li.controller: info
+mybatis:
+  mapper-locations: classpath:com/li/mapper/*.xml
+  type-aliases-package: com.li.entity

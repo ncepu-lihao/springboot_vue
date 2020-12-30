@@ -1,0 +1,11 @@
+#spring.profiles.active决定激活哪个配置文件
+spring:
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  profiles:
+    active: lihao
+
+
+
+

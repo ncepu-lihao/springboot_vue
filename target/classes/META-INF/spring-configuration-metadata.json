@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "tp",
+      "type": "com.li.config.TpConfig",
+      "sourceType": "com.li.config.TpConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "tp.dev-mode",
+      "type": "java.lang.Boolean",
+      "description": "开发模式",
+      "sourceType": "com.li.config.TpConfig",
+      "defaultValue": false
+    },
+    {
+      "name": "tp.file-dir",
+      "type": "java.lang.String",
+      "description": "网站的文件路径",
+      "sourceType": "com.li.config.TpConfig",
+      "defaultValue": ""
+    },
+    {
+      "name": "tp.jwt-expired",
+      "type": "java.lang.Long",
+      "description": "jwt token过期时间",
+      "sourceType": "com.li.config.TpConfig"
+    }
+  ],
+  "hints": []
+}
